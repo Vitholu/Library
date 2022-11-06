@@ -6,30 +6,37 @@ function addBookToLibrary(title, author, pages, read) {
 	library.push(title);
 }
 
-function loopBookArray(array) {
-	for (const i of array) {
-		console.log(i);
+class AddBookToLibrary {
+	constructor(title, author, pages, read) {
+		title = { title: title, author: author, pages: pages, read: read };
+		library.push(title);
+	}
+	loopBookArray(array) {
+		for (const i of array) {
+			console.log(i);
+		}
 	}
 }
 
-addBookToLibrary(
+let book1 = new AddBookToLibrary(
 	'The Hobbit ',
 	'by J.R.R. Tolkien ',
 	'295 pages ',
 	' not read yet',
 );
 
-addBookToLibrary(
-	'The Hoebbit ',
-	'by J.R.R. Tolkien ',
+let book2 = new AddBookToLibrary(
+	'The Hait ',
+	'by gragres',
 	'295 pages ',
 	' not read yet',
 );
 
-addBookToLibrary(
-	'The Hait ',
-	'by J.R.R. Tolkien ',
+let book3 = new AddBookToLibrary(
+	'The Hoebbit ',
+	'by artades',
 	'295 pages ',
 	' not read yet',
 );
-loopBookArray(library);
+
+book1.loopBookArray(library);
